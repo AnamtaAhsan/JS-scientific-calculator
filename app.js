@@ -11,6 +11,14 @@ function ClearAll(){
     input.value = ""
 }
 
+function Calculate(){
+  try {
+    input.value = eval(input.value);
+  } catch (error){
+      input.value = "Error";
+    }
+    }
+
 function applyFunc(func){
   var val = parseFloat(input.value);
     if (isNaN(val)) {
